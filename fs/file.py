@@ -3,13 +3,13 @@ from click import *
 
 
 @group()
-def file() -> None:
+def fs() -> None:
     pass
 
 
 @command(help="creating a file")
-@option("--name", help="name of the file", required=True)
-@option("--content", help="content of the file", required=False)
+@argument("name", required=True)
+@argument("content", required=False)
 def create(name: str, content: str) -> None:
     with open(name, "w", encoding="utf-8") as f:
         if content:
@@ -28,7 +28,7 @@ def cat(name: str) -> None:
 
 @command(help="delete a file")
 @argument("name", required=True)
-def delete(name: str) -> None:
+def rm(name: str) -> None:
     os.remove(name)
 
 
@@ -60,9 +60,9 @@ def ls(show_all, show_list) -> None:
             print(file)
 
 
-file.add_command(create)
-file.add_command(delete)
-file.add_command(cat)
-file.add_command(mv)
-file.add_command(cp)
-file.add_command(ls)
+fs.add_command(create)
+fs.add_command(rm)
+fs.add_command(cat)
+fs.add_command(mv)
+fs.add_command(cp)
+fs.add_command(ls)

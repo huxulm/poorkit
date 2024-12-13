@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "poorkit"
-version = "0.0.4"
+version = "0.0.6"
 description = "A programmer's personal tool collection."
 authors = ["Huxulm <huxulm@gmail.com>"]
 license = "MIT"
@@ -8,7 +8,6 @@ readme = "README.md"
 homepage = "https://github.com/huxulm/poorkit"
 packages = [
     { include = "poorkit.py", from = "." },
-    { include = "file.py", from = "." }
 ]
 
 [tool.poetry.dependencies]

@@ -21,7 +21,7 @@ pip install poorkit
 Here is a basic example of how to use Poorkit:
 
 ```shell
-pk file create --name "README.md" --content "Hi, poorkit!"
+pk file create "README.md" "Hi, poorkit!"
 ```
 
 ## Contributing

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "poorkit"
-version = "0.0.6"
+version = "0.0.7"
 description = "A programmer's personal tool collection."
 authors = ["Huxulm <huxulm@gmail.com>"]
 license = "MIT"

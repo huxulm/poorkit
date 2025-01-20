@@ -45,7 +45,9 @@ REG_BLANK_LINE = r"^\s*$"
 EXT_LANG_MAPPING = {
     ".py": "python",
     ".js": "javascript",
+    ".jsx": "javascript",
     ".ts": "typescript",
+    ".tsx": "typescript",
     ".java": "java",
     ".c": "c",
     ".cpp": "cpp",
@@ -97,7 +99,8 @@ def extract_code_from_directory(dirs, langs, output_file):
     print(f"support langs: {support_langs}")
     with open(output_file, "w", encoding="utf-8") as outfile:
         for directory in dirs:
-            for root, dirs, files in os.walk(directory):
+            for root, _, files in os.walk(directory):
+                print(f"collecting from files: {files}")
                 for file in files:
                     # get file extend name
                     _, ext = os.path.splitext(file)

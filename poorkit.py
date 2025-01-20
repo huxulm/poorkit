@@ -1,4 +1,5 @@
 from click import *
+from cd.code import code
 from fs.file import fs
 from video.video import video
 import pkg_resources
@@ -18,3 +19,4 @@ def cli() -> None:
 
 cli.add_command(fs)
 cli.add_command(video)
+cli.add_command(code)

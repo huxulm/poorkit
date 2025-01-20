@@ -18,10 +18,16 @@ pip install poorkit
 
 ## Usage
 
-Here is a basic example of how to use Poorkit:
+- Create file
 
 ```shell
 pk file create "README.md" "Hi, poorkit!"
+```
+
+- Collect code
+
+```shell
+pk code collect --langs go --dirs ./cd --output all.txt
 ```
 
 ## Contributing

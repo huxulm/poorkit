@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "poorkit"
-version = "0.0.7"
+version = "0.0.8"
 description = "A programmer's personal tool collection."
 authors = ["Huxulm <huxulm@gmail.com>"]
 license = "MIT"
@@ -13,6 +13,7 @@ packages = [
 [tool.poetry.dependencies]
 click = "^8.1.7"
 python = "^3.12"
+setuptools = "^75.8.0"
 
 [tool.poetry.group.dev.dependencies]
 
